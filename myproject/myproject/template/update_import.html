@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content1 %}	
+
+<div style= "text-align: center; font-size: 30px;" >
+    <h2>Cập nhật đơn nhập kho</h2>
+</div>
+
+<div style= "text-align: center;">
+    <form action="", method="post">
+        {% csrf_token %}
+        <p>Mã sản phẩm:
+            
+            {{ form.product_code }}</p>
+        <p>Ngày nhập kho: {{ form.import_date}}</p>
+        <p>Số lượng:
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    
+            {{form.number}}</p>
+        <p>Nhà cung cấp:
+            &nbsp
+            {{form.supplier}}</p>           
+        <p>Giá nhập kho: 
+            &nbsp
+            {{form.purchase_price}}</p>
+        <input type="submit" value= "Xác nhận">
+    </form>
+</div>
+
+{% endblock %}

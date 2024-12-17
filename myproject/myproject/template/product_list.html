@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content1 %}	
+
+	<p>
+		<br><br><br>
+	</p>
+	<table style="background-color:aqua;margin: 0 auto;">
+ 	 <tr>
+		<th style="border: 1px solid #000" width="100px" height="50px">Mã sản phẩm</th>
+		<th style="border: 1px solid #000" width="100px" height="50px">Tên sản phẩm</th>
+		<th style="border: 1px solid #000" width="100px" height="50px">Giá mua</th>
+		<th style="border: 1px solid #000" width="100px" height="50px">Giá bán</th>
+		<th style="border: 1px solid #000" width="100px" height="50px">Số lượng</th>
+  	  </tr>
+  	</table>
+	{% for item in products %}
+	<table style="margin: 0 auto;">
+ 	 <tr>
+		<td width="100px" height="50px" style="text-align: center;">{{item.product_code}}</td>
+		<td width="100px" height="50px" style="text-align: center;"">{{item.name}}</td>
+		<td width="100px" height="50px" style="text-align: center;"">{{item.purchase_price}}</td>
+		<td width="100px" height="50px" style="text-align: center;"">{{item.sale_price}}</td>
+		<td width="100px" height="50px" style="text-align: center;"">{{item.quantity}}</td>
+  	  </tr>
+  	</table>
+	{% endfor %}
+	<br>
+	<div style= "text-align: center;font-size: 30px;color:rgb(84, 148, 127)" >
+		<a href="{% url 'view_home' %}">Trở về trang chủ</a>
+	</div>
+
+{% endblock %}

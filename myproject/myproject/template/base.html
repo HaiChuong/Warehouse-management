@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quản lý kho</title>
+	<style>
+		.header{
+			padding: 30px;
+			background-color: #CCC;
+			color: #000
+		}
+		.menu{
+			background-color: rgb(84, 148, 127);
+			color: #180d0d;
+			font-weight: bold;
+		}
+		.menu ul li {
+			float: left;
+			padding: 20px 150px;
+		}
+		.menu ul{
+			list-style-type: none;
+			margin: 0 auto;
+		}
+		.menu ul li:hover {
+			background-color: #CCC;
+			color: #000;
+			width: 30px;
+			font-weight: bold;
+		}
+		.menu:after{
+			clear: both;
+			display: table;
+			content: "";
+		}
+		td{
+		border: 1px solid #000
+		}
+		.function{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.function ul li{
+			margin: 30px 0;
+			font-size: 25px;
+		}
+		.function ul{
+			list-style-type: none;
+			margin: 0 auto; 
+		}
+		.update_choose ul{
+			list-style-type: none;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1 style="text-align: center;">Quản lý kho hàng</h1>
+	</div>
+	
+	<div class="content">
+		{% block content1 %}
+
+		{% endblock %}
+	</div>
+</body>
+</html>

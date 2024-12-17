@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content1 %}	
+
+<div style= "text-align: center; font-size: 30px;">
+	Chọn mã sản phẩm cần cập nhật
+</div>
+
+	<div class = "update_choose" style = "text-align: center; font-size: 30px;">
+		<ul>
+			{% for product in products %}
+				<li>Mã sản phẩm:{{ product.product_code }}:  
+					<a href="{% url 'update_inventory' pk=product.pk %}">Cập nhật</a>
+				</li>
+        	{% endfor %}
+		</ul>
+	</div>
+
+{% endblock %}

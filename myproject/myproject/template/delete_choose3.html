@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content1 %}	
+
+<div style= "text-align: center; font-size: 30px;">
+	Chọn đơn cần xoá
+</div>
+
+	<div class = "update_choose" style = "text-align: center; font-size: 30px;">
+		<ul>
+			{% for product in products %}
+				<li>Mã sản phẩm:{{ product.product_code }} xuất kho ngày {{product.export_date}}:
+					<a href="{% url 'delete_export' pk=product.pk %}">Xoá</a>
+				</li>
+        	{% endfor %}
+		</ul>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content1 %}	
+
+<div class="menu">
+	<ul>
+		<li>Sản phẩm</li>
+		<li>Nhập kho</li>
+		<li>Xuất kho</li>
+		<li>Kho hàng</li>
+	</ul>
+</div>
+<div class="function">
+	<div>
+		<ul>
+			<li><a href="{% url 'add_product' %}">Thêm sản phẩm</a></li>
+			<li><a href="{% url 'update_choose' %}">Cập nhật sản phẩm</a></li>
+			<li><a href="{% url 'delete_choose' %}">Xoá sản phẩm</a></li>
+			<li><a href="{% url 'product_list' %}">Xem danh sách sản phẩm</a></li>
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li><a href="{% url 'add_import' %}">Thêm đơn nhập kho</a></li>
+			<li><a href="{% url 'update_choose2' %}">Cập nhật đơn nhập kho</a></li>
+			<li><a href="{% url 'delete_choose2' %}">Xoá đơn nhập kho</a></li>
+			<li><a href="{% url 'import_list' %}">Xem danh sách đơn nhập kho</a></li>
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li><a href="{% url 'add_export' %}">Thêm đơn xuất kho</a></li>
+			<li><a href="{% url 'update_choose3' %}">Cập nhật đơn xuất kho</a></li>
+			<li><a href="{% url 'delete_choose3' %}">Xoá đơn xuất kho</a></li>
+			<li><a href="{% url 'export_list' %}">Xem danh sách đơn xuất kho</a></li>
+		</ul>
+	</div>	
+	<div>
+		<ul>
+			<li><a href="{% url 'add_inventory' %}">Thêm sản phẩm kho</a></li>
+			<li><a href="{% url 'update_choose4' %}">Cập nhật kho hàng</a></li>
+			<li><a href="{% url 'delete_choose4' %}">Xoá sản phẩm kho</a></li>
+			<li><a href="{% url 'inventory_list' %}">Xem danh sách kho hàng</a></li>
+		</ul>
+	</div>			
+</div>	
+
+{% endblock %}
